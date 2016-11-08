@@ -3,20 +3,16 @@ var PeerConnection = window.mozRTCPeerConnection || window.webkitRTCPeerConnecti
 var IceCandidate = window.mozRTCIceCandidate || window.RTCIceCandidate;
 var SessionDescription = window.mozRTCSessionDescription || window.RTCSessionDescription;
 navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
-
 var pc; // PeerConnection
-
-
 // Step 1. getUserMedia
 navigator.getUserMedia(
   { audio: true, video: true }, 
   gotStream, 
   function(error) { console.log(error) }
 );
-
 function gotStream(stream) {
-  document.getElementById("callButton").style.display = 'inline-block';
-  document.getElementById("localVideo").src = URL.createObjectURL(stream);
+document.getElementById("callButton").style.display = 'inline-block';
+document.getElementById("localVideo").src = URL.createObjectURL(stream);
 
  /* var pc_config = {"iceServers": [{"url": "turn:numb.viagenie.ca:19305", "username": 'malukh_e-a@mail.ru', "credential": "PLACE_HERE_YOUR_PASSWORD"}, {"url": "stun:stun.l.google.com:19302"},{url:'stun:stun01.sipphone.com'},
 {url:'stun:stun.ekiga.net'},
@@ -55,8 +51,6 @@ pc = new PeerConnection(peerConnectionConfig);
   pc.onicecandidate = gotIceCandidate;
   pc.onaddstream = gotRemoteStream;
 }
-
-
 // Step 2. createOffer
 function createOffer() {
   pc.createOffer(
@@ -65,8 +59,6 @@ function createOffer() {
     { 'mandatory': { 'OfferToReceiveAudio': true, 'OfferToReceiveVideo': true } }
   );
 }
-
-
 // Step 3. createAnswer
 function createAnswer() {
   pc.createAnswer(
@@ -75,8 +67,6 @@ function createAnswer() {
     { 'mandatory': { 'OfferToReceiveAudio': true, 'OfferToReceiveVideo': true } }
   );
 }
-
-
 function gotLocalDescription(description){
   pc.setLocalDescription(description);
   sendMessage(description);
@@ -97,9 +87,6 @@ function gotRemoteStream(event){
   document.getElementById("remoteVideo").src = URL.createObjectURL(event.stream);
 }
 
-
-////////////////////////////////////////////////
-// Socket.io
 
 var socket = io.connect('//ec2-35-160-139-209.us-west-2.compute.amazonaws.com:1234');
 
