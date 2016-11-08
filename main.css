@@ -1,0 +1,93 @@
+.layer{
+
+width: 99%; /* Ширина блока */
+height: 100%; /* Высота блока */
+padding: 50px; /* Поля вокруг текста */
+border: solid 1px black; /* Параметры рамки */
+}
+.body{
+background-color: #FEE7F0;
+}
+
+
+
+
+.description{
+list-style-type: none;
+}
+.select_btn input{
+border-radius: 5px;
+}
+
+.select_btn input:hover{
+background-color: #FBE9EB;
+}
+.headen{
+display: none;
+}
+
+.demo {
+width: 550px;
+height: 100%;
+margin: 20px auto;
+padding: 10px;
+color: #506c74;
+font-family: "PT Sans", Verdana, Arial, sans-serif;
+font-size: 13px;
+margin-bottom: 0%;
+}
+
+.chat .messages{
+	height: 300px;
+	border: 1px solid #d4d4d4;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 5px;
+}
+
+.chat .messages .user{
+	color: #B22222;
+}
+
+.chat .message{
+	width: 70%;
+}
+
+.chat .panel{
+	margin-top: 8px;
+}
+
+#message_text{
+	width: 60%;
+	display: inline-block;
+	margin-left: 8px;
+}
+.body { height: 100%; margin: 0;margin-top: 0; background: #110010}
+.remoteVideo {	     
+	background: #000; 
+	 width: 80%;
+	 height: 250px;
+	 margin-top: 1%;
+	 margin-left: 10%;
+ }
+.localVideo {
+	border: 1px solid #333;
+	background: #000; 
+	 width: 25%;
+	 height: 100px;
+	 margin-bottom: 1em;
+	 margin-left: 50%;}
+.callButton { 
+	font-size: 1em;
+	border-radius: 1em; 
+	margin-top: -12%;
+	margin-left: 20%;
+}
+.colortext {
+	background-color: #000000; /* Цвет фона */
+	color: #4F6B72; /* Цвет текста */
+	border-radius: 20px;
+}
+.but{
+	background-color: black;
+}

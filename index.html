@@ -1,0 +1,117 @@
+﻿<html>
+<head style="background-color: black">
+  <link href='//fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+  <meta http-equip="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Site!</title>
+
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+
+
+  <font face="Lobster, sans-serif">
+
+    <table width="100%" height="100%" border="1" bgcolor="#110010" bordercolor="black">
+      <tr>
+        <td rowspan="2" width="60%">
+
+
+        <div class="layer">
+          <h2>Алгоритмы</h2>
+          <p>Выбрать алгоритм:</p>
+          <div class="select_btn">
+          <form>
+            <input id="btn11" type="button" value="Метод секущих">
+            <input id="btn12" type="button" value="Метод дихотомии">
+            <input id="btn13" type="button" value="Метод Ньютона">
+            <input id="btn14" type="button" value="Метод хорд">
+            <input id="btn15" type="button" value="Метод простой итерации">
+          </form>
+          </div>
+          <div class="container-fluid">
+            <div class="col-md-4">
+              <div class="row">
+                <form id="form_inp1" class="inp_form">
+                <div id='cont1'>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id='descr1'>
+            </div>
+          </div>
+
+
+
+            </td>
+
+            <td height="50%">
+	         <div class="body">
+
+				<div class="remoteVideo">
+						<video id="remoteVideo" autoplay width="100%" height="100%">></video>
+
+				</div>
+				<div class="localVideo">
+					 <video id="localVideo" autoplay muted width="100%" height="100%"></video>
+				</div>
+
+
+				<div class="callButton">
+					<button id="callButton" onclick="createOffer()" style="color: red; font-size: 2em;border-radius: 1em;background-color: black">✆</button>
+				</div>
+			</div>
+
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+	            <div class="demo">
+				    <div class="chat">
+				        <div class="messages" id="messages"></div>
+
+				        <div class="panel">
+				            <span class="nick"></span> <input type="text" class="colortext"name="message_text" id="message_text">
+				            <button type="button" id="message_btn" style="background-color: black;border-radius: 20px;">Отправить</button>
+				        </div>
+				    </div>
+				</div>
+            </td>
+          </tr>
+		  <tr>
+            <td bgcolor="-webkit-linear-gradient(#000000 0%, #707070 100%)">
+	            <div class="demo">
+				    <div class="chat" >
+
+				        <div class="messages" id="messages_out"></div>
+
+				        <div class="panel">
+				            <span class="nick1"></span> <input type="text" class="colortext" name="message_text" id="message_text_out">
+				            <button type="button" id="test_out" style="background-color: black;border-radius: 20px;">Отправить</button>
+				        </div>
+				    </div>
+				</div>
+            </td>
+          </tr>
+        </table>
+
+        <footer>
+        </footer>
+      </font>
+
+      <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+   <script src="test.js"></script>
+   <script src="common.js"></script>
+   <script src="chat.js"></script>
+   <script src="forserv.js"></script>
+    </body>
+
+
+    </html>
+
+
