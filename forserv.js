@@ -1,6 +1,5 @@
     $(document).ready(function () {
         var socket = io.connect('//ec2-35-160-139-209.us-west-2.compute.amazonaws.com:4444');
-        //var name = prompt("Ввод ника для чата", '');
         var name1="";
         var messages = $("#messages_out");
         var message_txt = $("#message_text_out")
@@ -46,7 +45,4 @@
             socket.emit("message", text);
         });
 
-        //function safe(str) {
-        //    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        //}
     });
