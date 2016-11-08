@@ -5,10 +5,6 @@ var https = require('https');
 var privateKey  = fs.readFileSync('./key.pem');
 var certificate = fs.readFileSync('./cert.pem');
 var credentials = {key: privateKey, cert: certificate,passphrase:"mephi"};
-
-//var httpServer = http.createServer(app2);n
-
-
 var file = new(static.Server)();
 var app = https.createServer(credentials, function (req, res) {
 	file.serve(req, res);
